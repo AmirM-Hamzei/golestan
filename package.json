@@ -1,0 +1,14 @@
+{
+	"name": "amirmh_web2_golestan",
+	"version": "1.0.0",
+	"description": "AmirMH Web2 Project Golestab website main page",
+	"main": "index.js",
+	"scripts": {
+		"scss": "node-sass -w ./scss/main.scss -o ./css/ -r --output-style compressed"
+	},
+	"author": "Amir Mahmood Hamzei (AmirMH)",
+	"license": "ISC",
+	"devDependencies": {
+		"node-sass": "^9.0.0"
+	}
+}
