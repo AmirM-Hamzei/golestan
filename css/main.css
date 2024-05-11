@@ -768,14 +768,15 @@ body {
   align-items: flex-start;
 }
 
-.container footer .Grid .GridBox .Grid_item.col p {
+.container footer .Grid .GridBox .Grid_item.col a {
   font-size: 13px;
   color: #bcbec0;
   line-height: 28px;
+  text-decoration: none;
   transition: 300ms;
 }
 
-.container footer .Grid .GridBox .Grid_item.col p:hover {
+.container footer .Grid .GridBox .Grid_item.col a:hover {
   color: #fff;
 }
 

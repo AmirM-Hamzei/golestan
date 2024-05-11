@@ -673,10 +673,11 @@ $edge_color: #e9d69f;
 						flex-flow: column nowrap;
 						justify-content: center;
 						align-items: flex-start;
-						p {
+						a {
 							font-size: 13px;
 							color: #bcbec0;
 							line-height: 28px;
+							text-decoration: none;
 							transition: 300ms;
 							&:hover {
 								color: $btn_color;
