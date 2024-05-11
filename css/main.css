@@ -35,11 +35,12 @@ body {
   line-height: 1;
 }
 
+/* Variables */
+/* /Variables */
 /* /settings */
 .container {
   width: 1600px;
   margin: auto;
-  background-image: url(../images/backgrounds/background-classic.png);
 }
 
 .container header {
@@ -151,10 +152,20 @@ body {
   height: 100px;
 }
 
+.container .bgimg {
+  width: inherit;
+  height: 500px;
+  position: fixed;
+  background-image: url(../images/backgrounds/background-classic.png);
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+
 .container .Lottery {
-  background-image: linear-gradient(190deg, #fbfbfb 0%, #d2d2d2 100%);
   width: inherit;
   height: 457px;
+  background-image: linear-gradient(190deg, #fbfbfb 0%, #d2d2d2 100%);
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -245,7 +256,7 @@ body {
 }
 
 .container .Golestan_Intro {
-  width: 100%;
+  width: inherit;
   margin: auto;
   background-color: #fff;
 }
@@ -307,8 +318,9 @@ body {
 }
 
 .container .Product_Intro {
-  width: 100%;
+  width: inherit;
   background-color: #fff;
+  margin-bottom: 250px;
 }
 
 .container .Product_Intro .PI_item {
@@ -399,4 +411,146 @@ body {
 .container .Product_Intro .PI_item .PI_TextBox .btn a:hover {
   background-color: #ed1c24;
   color: #fff;
+}
+
+.container .Magazine {
+  width: inherit;
+  background-color: #fff;
+}
+
+.container .Magazine h3 {
+  padding: 50px 300px 50px 0;
+  font-size: 20px;
+  color: #ff0000;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.container .Magazine .M_Posts {
+  width: inherit;
+  margin: auto;
+  padding: 75px 0;
+  background-color: #cde4b0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.container .Magazine .M_Posts .Post {
+  width: 320px;
+  height: 600px;
+  background-color: #fff;
+  box-shadow: -3px 3px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.container .Magazine .M_Posts .Post .Post_TextBox {
+  width: 100%;
+  height: 280px;
+  padding: 22px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container .Magazine .M_Posts .Post .Post_TextBox a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #ff0000;
+}
+
+.container .Magazine .M_Posts .Post .Post_TextBox p {
+  width: 100%;
+  height: 140px;
+  font-size: 14px;
+  color: #7c7d7e;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 30px;
+  text-align: justify;
+  text-wrap: wrap;
+  text-overflow: ellipsis;
+}
+
+.container .Magazine .M_Posts .Post .Post_TextBox .btn {
+  margin: 5px 0;
+  padding: 7px 20px;
+  color: #7c7d7e;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 26px;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  transition: 300ms;
+}
+
+.container .Magazine .M_Posts .Post .Post_TextBox .btn:hover {
+  color: #fff;
+  background-color: #ed1c24;
+}
+
+.container .Magazine .M_Videos {
+  width: inherit;
+  margin: auto;
+  padding: 62.5px 0;
+  background-color: #fff;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.container .Magazine .M_Videos .Post {
+  width: 320px;
+  height: 450px;
+  box-shadow: -3px 3px 3px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #c8c8c8;
+}
+
+.container .Magazine .M_Videos .Post .Post_TextBox {
+  width: 100%;
+  height: 270px;
+  padding: 22px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.container .Magazine .M_Videos .Post .Post_TextBox h2 {
+  font-size: 17px;
+  color: #ff0000;
+}
+
+.container .Magazine .M_Videos .Post .Post_TextBox p {
+  width: 100%;
+  font-size: 14px;
+  color: #7c7d7e;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 30px;
+  text-align: justify;
+  text-wrap: wrap;
+  text-overflow: ellipsis;
+}
+
+.container .Magazine .M_Videos .Post .Post_TextBox .btn {
+  margin: 5px 0;
+  padding: 7px 20px;
+  color: #7c7d7e;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 26px;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  transition: 300ms;
+}
+
+.container .Magazine .M_Videos .Post .Post_TextBox .btn:hover {
+  color: #fff;
+  background-color: #ed1c24;
 }
