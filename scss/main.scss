@@ -29,20 +29,24 @@ body {
 	line-height: 1;
 }
 $Title_color: #ff0000;
+$Title_size: 20px;
 $Menu_color: #afb2b4;
 $Paragraph_color: #7a7a7a;
 $Short_Text_color: #7c7d7e;
 $Divider_color: #bababa;
+$btn_background: #ed1c24;
+
 /* /settings */
 .container {
 	width: 1600px;
 	margin: auto;
-	/* display: flex;
-    flex-flow: column nowrap; */
+	background-image: url(../images/backgrounds/background-classic.png);
 	header {
 		width: inherit;
 		height: 100px;
 		background-image: url(../images/backgrounds/header-background.png);
+		position: fixed;
+		z-index: 2;
 		nav {
 			width: inherit;
 			height: inherit;
@@ -126,6 +130,10 @@ $Divider_color: #bababa;
 			}
 		}
 	}
+	.space100{
+		width: inherit;
+		height: 100px;
+	}
 	.Lottery {
 		background-image: linear-gradient(190deg, #fbfbfb 0%, #d2d2d2 100%);
 		width: inherit;
@@ -160,7 +168,7 @@ $Divider_color: #bababa;
 			}
 			h2 {
 				height: 20px;
-				font-size: 20px;
+				font-size: $Title_size;
 				color: #58595b;
 				font-weight: 300;
 			}
@@ -185,6 +193,10 @@ $Divider_color: #bababa;
 				border: 1px solid #c8c8c8;
 				border-radius: 8px;
 				transition: 300ms;
+				&:hover {
+					background-color: $Title_color;
+					color: #fff;
+				}
 			}
 			img {
 				align-self: center;
@@ -208,14 +220,14 @@ $Divider_color: #bababa;
 		width: 100%;
 		margin: auto;
 		background-color: #fff;
-		.GI_TextBox{
+		.GI_TextBox {
 			width: 43.75%;
 			margin: auto;
 		}
 		h2 {
 			width: 100%;
 			padding: 50px 10px 10px;
-			font-size: 20px;
+			font-size: $Title_size;
 			color: $Title_color;
 		}
 		p {
@@ -225,19 +237,20 @@ $Divider_color: #bababa;
 			color: $Paragraph_color;
 			font-weight: 100;
 			line-height: 36px;
-			mark{
+			mark {
 				background-color: initial;
-				font-size: 20px;
+				font-size: $Title_size;
 				color: $Title_color;
 			}
 		}
-		.GI_ImageBox{
-			margin: 105px 0;
+		.GI_ImageBox {
+			padding: 105px 0;
+			background-color: #fff;
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: center;
 			align-items: center;
-			div{
+			div {
 				width: fit-content;
 				height: fit-content;
 				padding: 10px;
@@ -248,11 +261,92 @@ $Divider_color: #bababa;
 				row-gap: 21px;
 				font-size: 16px;
 				color: $Short_Text_color;
-				span:nth-of-type(2){
+				span:nth-of-type(2) {
 					width: 100%;
 					height: 1px;
 					background-color: red;
 					background-color: $Divider_color;
+				}
+			}
+		}
+	}
+	.Product_Intro {
+		width: 100%;
+		background-color: #fff;
+		.PI_item {
+			width: inherit;
+			padding-bottom: 75px;
+			.Widget_Container {
+				width: inherit;
+				padding-bottom: 15px;
+				background-color: #e9d69f;
+				position: relative;
+				img {
+					width: inherit;
+					object-fit: cover;
+				}
+				.Red_Widget {
+					padding: 5px 37px 4px 114px;
+					color: #fff;
+					background-color: #ed1c24;
+					font-weight: 100;
+					line-height: 44px;
+					position: absolute;
+					bottom: 0;
+					right: 443px;
+					p:nth-of-type(1) {
+						font-size: 29px;
+					}
+					p:nth-of-type(2) {
+						font-size: 16px;
+					}
+				}
+			}
+			.spacer{
+				width: 100%;
+				height: 20px;
+			}
+			.PI_TextBox {
+				width: 43.75%;
+				margin: auto;
+				padding: 10px;
+				padding-top: 55px;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: flex-start;
+				row-gap: 21px;
+				h2 {
+					font-size: $Title_size;
+					color: $Title_color;
+				}
+				p {
+					font-size: 15px;
+					color: #818588;
+					font-weight: 400;
+					line-height: 36px;
+				}
+				.btn{
+					padding-top: 20px;
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: flex-start;
+					align-items: center;
+					column-gap: 7px;
+					a{
+						font-size: 15px;
+						color: $Short_Text_color;
+						text-align: center;
+						text-decoration: none;
+						padding: 12px 24px;
+						border: 1px solid #c8c8c8;
+						border-radius: 8px;
+						transition: 300ms;
+						&:hover{
+							background-color: $btn_background;
+							color: #fff;
+						}
+					}
 				}
 			}
 		}
