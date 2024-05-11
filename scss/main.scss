@@ -30,10 +30,13 @@ body {
 }
 $Title_color: #ff0000;
 $Menu_color: #afb2b4;
+$Paragraph_color: #7a7a7a;
+$Short_Text_color: #7c7d7e;
+$Divider_color: #bababa;
 /* /settings */
 .container {
 	width: 1600px;
-	margin: 0 auto;
+	margin: auto;
 	/* display: flex;
     flex-flow: column nowrap; */
 	header {
@@ -61,41 +64,62 @@ $Menu_color: #afb2b4;
 					&:last-child {
 						border: unset;
 					}
-					&:first-child{
+					&:first-child {
 						width: 200px;
-
 					}
 					a {
+						width: 100%;
 						font-size: 16px;
 						color: $Menu_color;
 						text-decoration: none;
+						text-wrap: nowrap;
 						transition: 300ms;
-						/* &:hover {
-							color: #fff;
-						} */
 						&.current {
 							color: #fff;
 							pointer-events: none;
 						}
 					}
-					&:hover a{
-							color: #fff;
-
+					&:hover .Menu_item {
+						color: #fff;
 					}
-					img{
+					&:hover ul {
+						display: flex;
+						opacity: 1;
+					}
+					&:not(:hover) ul {
+						display: none;
+						opacity: 0;
+					}
+					img {
 						position: absolute;
 						top: -11px;
 						left: 35px;
 					}
 					ul {
 						list-style: none;
+						padding: unset;
+						opacity: 0;
 						display: none;
 						flex-flow: column nowrap;
 						justify-content: center;
 						align-items: flex-start;
+						background-image: url(../images/backgrounds/header-background.png);
+						position: absolute;
+						top: 100%;
+						right: 0;
+						transition: linear all 300ms;
 						li {
-							padding: 5px 20px;
+							width: 100%;
 							border: unset;
+							padding: unset;
+							a {
+								display: block;
+								width: 100%;
+								padding: 13px 28px 13px;
+							}
+							&:hover a {
+								color: #fff;
+							}
 						}
 					}
 				}
@@ -165,6 +189,71 @@ $Menu_color: #afb2b4;
 			img {
 				align-self: center;
 				object-fit: contain;
+			}
+		}
+	}
+	.divider {
+		width: inherit;
+		height: 33px;
+		padding: 16px;
+		height: 1px;
+		background-color: #fff;
+		div {
+			width: 100%;
+			height: 1px;
+			background-color: $Divider_color;
+		}
+	}
+	.Golestan_Intro {
+		width: 100%;
+		margin: auto;
+		background-color: #fff;
+		.GI_TextBox{
+			width: 43.75%;
+			margin: auto;
+		}
+		h2 {
+			width: 100%;
+			padding: 50px 10px 10px;
+			font-size: 20px;
+			color: $Title_color;
+		}
+		p {
+			width: 100%;
+			padding: 10px;
+			font-size: 16px;
+			color: $Paragraph_color;
+			font-weight: 100;
+			line-height: 36px;
+			mark{
+				background-color: initial;
+				font-size: 20px;
+				color: $Title_color;
+			}
+		}
+		.GI_ImageBox{
+			margin: 105px 0;
+			display: flex;
+			flex-flow: row nowrap;
+			justify-content: center;
+			align-items: center;
+			div{
+				width: fit-content;
+				height: fit-content;
+				padding: 10px;
+				display: flex;
+				flex-flow: column nowrap;
+				justify-content: center;
+				align-items: center;
+				row-gap: 21px;
+				font-size: 16px;
+				color: $Short_Text_color;
+				span:nth-of-type(2){
+					width: 100%;
+					height: 1px;
+					background-color: red;
+					background-color: $Divider_color;
+				}
 			}
 		}
 	}

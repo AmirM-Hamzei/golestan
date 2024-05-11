@@ -4,7 +4,7 @@
 	"description": "AmirMH Web2 Project Golestab website main page",
 	"main": "index.js",
 	"scripts": {
-		"scss": "node-sass -w ./scss/main.scss -o ./css/ -r --output-style compressed"
+		"scss": "node-sass -w ./scss/main.scss -o ./css/ -r --output-style expanded"
 	},
 	"author": "Amir Mahmood Hamzei (AmirMH)",
 	"license": "ISC",
