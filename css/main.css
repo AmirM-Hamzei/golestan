@@ -43,6 +43,30 @@ body {
   margin: auto;
 }
 
+.container #scrollButton {
+  display: block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  position: fixed;
+  opacity: 0;
+  bottom: 20px;
+  left: 20px;
+  line-height: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 18px;
+  border-radius: 2px;
+  z-index: 100;
+  text-decoration: none;
+  transition: 300ms;
+}
+
+.container #scrollButton .fa-angle-up {
+  font-size: 14px;
+  line-height: 40px;
+}
+
 .container header {
   width: inherit;
   height: 100px;
@@ -585,7 +609,7 @@ body {
   height: 1px;
   background-color: #07787c;
   position: absolute;
-  top: 100px;
+  top: 280px;
 }
 
 .container .Social .S_GreenBox .line span:first-child {
@@ -669,7 +693,7 @@ body {
   width: inherit;
   height: 95px;
   padding: 20px;
-  background-color: #EEEFEF;
+  background-color: #eeefef;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -682,4 +706,97 @@ body {
 
 .container .Social .Links a img {
   object-fit: contain;
+  transition: 500ms;
+}
+
+.container footer {
+  width: inherit;
+  position: relative;
+}
+
+.container footer .red_bar {
+  width: inherit;
+  height: 25px;
+  background-color: #ed1c24;
+}
+
+.container footer .Grid {
+  width: inherit;
+  height: 364px;
+  background-image: url(../images/backgrounds/header-background.png);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container footer .Grid .GridBox {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(3, auto);
+  column-gap: 20px;
+  row-gap: 10px;
+  justify-content: center;
+  align-content: center;
+}
+
+.container footer .Grid .GridBox .Grid_item {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container footer .Grid .GridBox .Grid_item.line {
+  height: 46px;
+  border-top: 1px solid #828991;
+  border-bottom: 1px solid #828991;
+}
+
+.container footer .Grid .GridBox .Grid_item span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.container footer .Grid .GridBox .Grid_item.col {
+  padding: 10px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container footer .Grid .GridBox .Grid_item.col p {
+  font-size: 13px;
+  color: #bcbec0;
+  line-height: 28px;
+  transition: 300ms;
+}
+
+.container footer .Grid .GridBox .Grid_item.col p:hover {
+  color: #fff;
+}
+
+.container footer .about {
+  width: inherit;
+  height: 125px;
+  background-image: url(../images/backgrounds/header-background.png);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container footer .about span:nth-of-type(1) {
+  color: #9f9f9f;
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.container footer .about span:nth-of-type(2) {
+  color: #7b7b7b;
+  font-size: 14px;
+  line-height: 14px;
 }

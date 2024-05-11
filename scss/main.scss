@@ -45,6 +45,28 @@ $edge_color: #e9d69f;
 .container {
 	width: 1600px;
 	margin: auto;
+	#scrollButton {
+		display: block;
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		position: fixed;
+		opacity: 0;
+		bottom: 20px;
+		left: 20px;
+		line-height: 40px;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: #fff;
+		font-size: 18px;
+		border-radius: 2px;
+		z-index: 100;
+		text-decoration: none;
+		transition: 300ms;
+		.fa-angle-up {
+			font-size: 14px;
+			line-height: 40px;
+		}
+	}
 	header {
 		width: inherit;
 		height: 100px;
@@ -302,7 +324,7 @@ $edge_color: #e9d69f;
 				.Red_Widget {
 					padding: 5px 37px 4px 114px;
 					color: #fff;
-					background-color: #ed1c24;
+					background-color: $btn_background;
 					font-weight: 100;
 					line-height: 44px;
 					position: absolute;
@@ -516,7 +538,7 @@ $edge_color: #e9d69f;
 				height: 1px;
 				background-color: #07787c;
 				position: absolute;
-				top: 100px;
+				top: 280px;
 			}
 			.line {
 				span:first-child {
@@ -591,7 +613,7 @@ $edge_color: #e9d69f;
 			width: inherit;
 			height: 95px;
 			padding: 20px;
-			background-color: #EEEFEF;
+			background-color: #eeefef;
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: center;
@@ -600,7 +622,87 @@ $edge_color: #e9d69f;
 				height: 100%;
 				img {
 					object-fit: contain;
+					transition: 500ms;
 				}
+			}
+		}
+	}
+	footer {
+		width: inherit;
+		position: relative;
+		.red_bar {
+			width: inherit;
+			height: 25px;
+			background-color: $btn_background;
+		}
+		.Grid {
+			width: inherit;
+			height: 364px;
+			background-image: url(../images/backgrounds/header-background.png);
+			padding: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.GridBox {
+				display: grid;
+				grid-template-columns: repeat(4, 150px);
+				grid-template-rows: repeat(3, auto);
+				column-gap: 20px;
+				row-gap: 10px;
+				justify-content: center;
+				align-content: center;
+				.Grid_item {
+					width: 100%;
+					padding: 10px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					&.line {
+						height: 46px;
+						border-top: 1px solid #828991;
+						border-bottom: 1px solid #828991;
+					}
+					span {
+						color: #fff;
+						font-size: 16px;
+						font-weight: 100;
+					}
+					&.col {
+						padding: 10px 0;
+						display: flex;
+						flex-flow: column nowrap;
+						justify-content: center;
+						align-items: flex-start;
+						p {
+							font-size: 13px;
+							color: #bcbec0;
+							line-height: 28px;
+							transition: 300ms;
+							&:hover {
+								color: $btn_color;
+							}
+						}
+					}
+				}
+			}
+		}
+		.about {
+			width: inherit;
+			height: 125px;
+			background-image: url(../images/backgrounds/header-background.png);
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: center;
+			align-items: center;
+			span:nth-of-type(1) {
+				color: #9f9f9f;
+				font-size: 15px;
+				line-height: 27px;
+			}
+			span:nth-of-type(2) {
+				color: #7b7b7b;
+				font-size: 14px;
+				line-height: 14px;
 			}
 		}
 	}
